@@ -17,7 +17,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -49,11 +48,11 @@ CSRF_TRUSTED_ORIGINS = [
     .theianext-1-labs-prod-misc-tools-us-east-0
     .proxy.cognitiveclass.ai
     """,
-    """
-    https://jbmacaraig14-8000.
-    theiadockernext-0-labs-prod-theiak8s-4-tor01.
-    proxy.cognitiveclass.ai
-    """,
+    (
+    'https://jbmacaraig14-8000.'
+    'theiadockernext-0-labs-prod-theiak8s-4-tor01.'
+    'proxy.cognitiveclass.ai'
+    ),
     """https://jbmacaraig14-8000.
     theiadockernext-1-labs-prod-theiak8s-4-tor01.
     proxy.cognitiveclass.ai
@@ -109,7 +108,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "djangoproj.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -147,7 +145,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -170,8 +167,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_ROOT = os.path.join(STATIC_ROOT, "media")
 MEDIA_URL = "/media/"
 
-print(STATIC_ROOT)
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -182,5 +177,3 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "frontend/build"),
     os.path.join(BASE_DIR, "frontend/build/static"),
 ]
-
-print(STATICFILES_DIRS)
